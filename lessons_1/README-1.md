@@ -46,6 +46,8 @@ JavaScript – це мова програмування, яку розробни
        const age = 25;
        const message = 'Привіт';
        console.log(age);
+      
+
 
 - let 
 -------

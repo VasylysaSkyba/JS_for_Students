@@ -1,0 +1,75 @@
+ul,
+ol {
+  list-style: none;
+  text-decoration: none;
+}
+
+.list {
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.conainer {
+    margin: 30px;
+}
+
+.title {
+    margin-top: 10px;
+    color: rgb(18, 17, 18);
+}
+
+.subtitle {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.list {
+    list-style: decimal; /*circle, square, decima*/
+    margin-top: 20px;
+}
+.img {
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.item {
+    margin: 10px;
+}

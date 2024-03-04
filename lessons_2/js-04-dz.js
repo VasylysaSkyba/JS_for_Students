@@ -26,9 +26,9 @@
 //     console.log("Ви не повнолітній");
 // }
 
-// const name = prompt("Введіть ваше ім'я:");
-// const surName = prompt("Введіть ваше прізвище:");
-// const age = prompt("Введіть ваш вік:");
+// const name = prompt("Введіть ваше ім'я:", "");
+// const surName = prompt("Введіть ваше прізвище:", "");
+// const age = prompt("Введіть ваш вік:", "");
 
 // console.log("Привіт " + name + " " + surName);
 

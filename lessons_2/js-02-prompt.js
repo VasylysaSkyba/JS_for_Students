@@ -12,5 +12,5 @@
 
 // Запитуємо назву велописипеда, на якому хотіли покататися
 // і зберігаємо результат виклику prompt у змінну.
-// const bikelName = prompt("Please enter desired baki name");
+// const bikelName = prompt("Please enter desired baki name", ""); // якщо не поставити другі пусті лапки (аргумент) то prompt працює не правельно
 // console.log(bikelName);
