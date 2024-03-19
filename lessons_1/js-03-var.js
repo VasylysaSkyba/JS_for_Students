@@ -9,7 +9,7 @@
 // const isOpen = true; // форма відкрита
 // const checked = false; //поле форми не містить галочки
 
-// console.log(age);
+// console.log(checked);
 // console.log('Ціна:', totalPrice);
 
 
