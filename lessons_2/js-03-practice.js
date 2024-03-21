@@ -3,16 +3,16 @@
 // const age = prompt("Скільки Вам років?");
 // const ageUser = Number(age); //рядок перетворюємо у число
 // if (isNaN(ageUser) === false) {
-//   if (ageUser <= 18) {
-//     alert("Ви не повнолітній!");
+//   if (ageUser < 18) {
+//     alert("Ви неповнолітній!");
 //   } else {
 //     alert("Ви повнолітній!");
 //   }
 // } else {
-//   alert("Не правельні дані");
+//   alert("Неправельні дані");
 // }
 
-// Приклад 1. Перевірка часу
+// Приклад 2. Перевірка часу
 
 // const now = new Date();
 // const time = now.getHours();
@@ -21,3 +21,4 @@
 // } else {
 //   alert("Друга половина дня");
 // }
+

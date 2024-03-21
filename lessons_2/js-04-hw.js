@@ -23,7 +23,7 @@
 // if (вік >= 18) {
 //     console.log("Ви повнолітній");
 // } else {
-//     console.log("Ви не повнолітній");
+//     console.log("Ви неповнолітній");
 // }
 
 // const name = prompt("Введіть ваше ім'я:", "");
@@ -32,7 +32,7 @@
 
 // console.log("Привіт " + name + " " + surName);
 
-// if (age >= 18) {
+// if (age > 18) {
 //   console.log("Ви повнолітній");
 // } else {
 //   console.log("Ви неповнолітній");
