@@ -18,8 +18,7 @@
 • mousemove – рух миші.
 Події елементів керування:
 • submit – відвідувач надіслав форму <form>;
-• focus – відвідувач фокусується на елементі (наприклад, натискає на
-<input>).
+• focus – відвідувач фокусується на елементі (наприклад, натискає на <input>).
 
 Події клавіатури:
 • keydown – відвідувач натискає клавішу;
@@ -43,7 +42,7 @@
 обробнику onclick.
 
 Приклад:
-<input value=”Натисніть мене” onclick=”alert(“Клік!”)” type=”button”>
+<input value="Натисніть мене" onclick="alert('Клік!')" type="button">
 
 При натисканні мишкою на кнопці виконається код, вказаний в атрибуті onclick.
 
@@ -57,14 +56,13 @@
 <script>
 function countRabbits() {
 for (var i=1; i<=3; i++) {
-alert (“Кролик номер” + i);
+alert ("Кролик номер" + i);
 }
 }
 </script>
 </head>
 <body>
-<input type=”button” onclick=”countRabbits ()” value=”Вважати
-кроликів!” />
+<input type="button" onclick="countRabbits ()" value="Рахувати кроликів" />
 </body>
 </html>
 
