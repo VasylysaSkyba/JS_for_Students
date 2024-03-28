@@ -134,14 +134,14 @@ getElementsByTagName
 Наприклад:
 
 1. // отримати всі div-елементи
-2. var elements = document.getElementsByTagName ('div');
+2. const elements = document.getElementsByTagName ('div');
 
 document.getElementsByName
 Виклик document.getElementsByName(name) дозволяє отримати всі елементи з
 заданим атрибутом name.
 Наприклад, усі елементи з ім'ям age:
 
-1. var elems = document.getElementsByName ('age');
+1. const elems = document.getElementsByName ('age');
 
 --------------------------------------
 
@@ -153,16 +153,16 @@ document.getElementsByName
 <head>
 <meta charset=”utf-8” />
 <script>
-function onButton () {
-var text = document.getElementById (text);
-text.innerHTML = "На кнопку вже натискали" ;
-}
+function onButton (){
+    const text = document.getElementById ("text");
+    text.innerHTML = "На кнопку вже натиснули!!!" ;
+    }
 </script>
 </head>
 <body>
 <form>
-<p id = “text”> Кнопку ніхто не натискав! </p>
-<input type=”button” value=”Натисни мене!” onclick=”onButton()”/>
+<p id="text">Кнопку ніхто не натискав</p>
+    <input type="button" value="Натисне мене" onclick="onButton()"/>
 </form>
 </body>
 
@@ -172,21 +172,24 @@ text.innerHTML = "На кнопку вже натискали" ;
 <head>
 <meta charset=”utf-8” />
 <script>
-function onButton () {
-var text = document.getElementById (text);
-//get random color
-var r = Math.floor(Math.random() * 250);
-var g = Math.floor(Math.random() * 250);
-var b = Math.floor(Math.random() * 250);
-// set color
-Text.style.color = 'rgb('+r+','+g+','+b+')';
+function onButton() {
+    const textColor = document.getElementById("text2");
+    //рандомний колір//
+    const red = Math.floor(Math.random() * 250); //  Math.floor- округлення до найменшого
+    const green = Math.floor(Math.random() * 250); //Math.random - рандомне значення
+    const blue = Math.floor(Math.random() * 250);
+
+    //сет кольорів//
+
+    text2.style.color = "rgb(" + red + ", " + green + ", " + blue + ")";
 }
+
 </script>
 </head>
 <body>
 <form>
-<p id = “text”>Демо текст!</p>
-<input type=”button” value=”Натисни мене!” onclick=”onButton()”/>
+<<p id = "text2">Випадковий колір тексту</p>
+    <input type="button" onclick="onButton()" value="Клікни мене"/>
 </form>
 </body>
 <html>
@@ -197,27 +200,28 @@ Text.style.color = 'rgb('+r+','+g+','+b+')';
 <head>
 <meta charset=”utf-8” />
 <script>
-function onButton () {
-// Отримуємо числа
-var aE1 = document.getElementById ('a');
-var bE1 = document.getElementById (b);
-//отримуємо відповідь
-var з E1 = document.getElementById ('с');
-//перетворення
-var a = Number (aE1.value)
-var b = Number (bE1.value)
-var c = a + b
-// зберігаємо результат
-cEl.innerHTML = c;
+function onButton() {
+    //отримуємо числа//
+    const aEl = document.getElementById("a");
+    const bEl = document.getElementById("b");
+    //отримуємо відповіть//
+    const cEl = document.getElementById("c");
+    //перетворення//
+    const a = Number(aEl.value) //Number - пертворює передані значення в число
+    const b = Number(bEl.value) //value- значееня
+    const c = a + b
+    //зберігаємо результат//
+    cEl.value = c;
 }
 </script>
 </head>
 <body>
 <form>
-<p> a:<input id =“a” type=”number” value=”0”> </p>
-<p> b:<input id =“a” type=”number” value=”0”> </p>
-<p>a+b:<input id=“c”></b></p>
-<input type=”button” value=”Натисни мене!” onclick=”onButton()”/>
+<h1>Калькулятор</h1>
+    <p>a: <input id="a" type="number" value="0"/></p>
+    <p>b: <input id="b" type="number" value="0"/></p>
+    <p>a+b: <input id="c" type="number"/> </p>
+    <input type="button" value="Натисни мене" onclick="onButton()"/>
 </form>
 </body>
 <html>
