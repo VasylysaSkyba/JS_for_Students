@@ -1,0 +1,48 @@
+#slides {
+  position: relative;
+  height: 300px;
+  padding: 0px;
+  margin: 0px;
+  list-style-type: none;
+}
+.slide {
+  position: absolute; /*розташування один за одним*/
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  opacity: 0; /*прозорість 0, не прозорий 1 */
+  z-index: 1; /*визначає порядок стека елемента. Іншими словами, Ви можете розмістити елемент на сторінці вище іншого елементу або перед ним*/
+  -webkit-transition: opacity 1s; /* Це префікс для властивості transition для вебкітових браузерів (таких як Google Chrome та Safari).*/
+  -moz-transition: opacity 1s; /*Це префікс для властивості transition для браузера Firefox (Gecko engine).*/
+  -o-transition: opacity 1s; /*Це префікс для властивості transition для браузера Opera.*/
+  transition: opacity 1s; /*Ця властивість transition визначає стандартні параметри анімації переходу для всіх браузерів, які підтримують CSS3.*/
+}
+.showing {
+  opacity: 1;
+  z-index: 2;
+}
+
+.slide {
+  font-size: 20px;
+  padding: 4px;
+  box-sizing: border-box; /*Будь-які поля та межі будуть включені в розміри висоти та ширини елемента*/
+  background: #333;
+  color: #fff;
+}
+.slide:nth-of-type(1) {
+  /*Селектор :nth-of-type(n) обирає елемент, що є n елементом одного типу свого батька.*/
+  background: red;
+}
+.slide:nth-of-type(2) {
+  background: orange;
+}
+.slide:nth-of-type(3) {
+  background: green;
+}
+.slide:nth-of-type(4) {
+  background: blue;
+}
+.slide:nth-of-type(5) {
+  background: purple;
+}

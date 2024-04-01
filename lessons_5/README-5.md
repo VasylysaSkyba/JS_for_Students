@@ -24,74 +24,75 @@
 Важливо пам'ятати, що перед роботою в CSS потрібно змінити класи і використовувані
 ідентифікатори, щоб не було конфліктів з Вашими сайтами. Давайте
 розглянемо цей CSS:
-1. /*
-2. Первинні стилі
-3. З ними працює слайд-шоу
-4. */
-5. #slides {
-a. position: relative;
-b. height: 300px;
-c. padding: 0px;
-d. margin: 0px;
-e. list-style-type: none;
-6. }
-7. .slide {
-a. position: absolute;
-b. left: 0px;
-c. top: 0px;
-d. weight: 100%;
-e. height: 100%;
-f. opacity: 0;
-g. z-index: 1;
-h. -webkit-transition: opacity 1s;
-i. -Moz-transition: opacity 1s;
-j. -o- transition: opacity 1s;
-k. transition: opacity 1s;
-8. }
-9. .showing {
-a. opacity: 1;
-b. z-index: 2;
-10. }
 
+Первинні стилі. З ними працює слайд-шоу
+
+#slides {
+  position: relative;
+  height: 300px;
+  padding: 0px;
+  margin: 0px;
+  list-style-type: none;
+}
+.slide {
+  position: absolute; /*розташування один за одним*/
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  opacity: 0; /*прозорість 0, не прозорий 1 */
+  z-index: 1; /*визначає порядок стека елемента. Іншими словами, Ви можете розмістити елемент на сторінці вище іншого елементу або перед ним*/
+  -webkit-transition: opacity 1s; /* Це префікс для властивості transition для вебкітових браузерів (таких як Google Chrome та Safari).*/
+  -moz-transition: opacity 1s; /*Це префікс для властивості transition для браузера Firefox (Gecko engine).*/
+  -o-transition: opacity 1s; /*Це префікс для властивості transition для браузера Opera.*/
+  transition: opacity 1s; /*Ця властивість transition визначає стандартні параметри анімації переходу для всіх браузерів, які підтримують CSS3.*/
+}
+.showing {
+  opacity: 1;
+  z-index: 2;
+}
 Давайте додамо різні стилі для нашого слайд-шоу, щоб він придбав цікавіший зовнішній вигляд. Для демо використовуємо такі стилі:
 Другі стилі:
-Зовнішній вигляд; можете змінити
-*/
+
+Зовнішній вигляд можете змінити
+
 .slide {
-font-size: 4-px;
-padding: 4-px;
-box-sizing: border-dox;
-background: #333;
-color: #fff;
+  font-size: 20px;
+  padding: 4px;
+  box-sizing: border-box;    /*Будь-які поля та межі будуть включені в розміри висоти та ширини елемента*/
+  background: #333;
+  color: #fff;
 }
-.slide: nth-of-type (1) {
-background: red;
-}
-.slide: nth-of-type (2) {
-background: orange;
-}
-.slide: nth-of-type (3) {
-background: green;
-}
-.slide: nth-of-type (4) {
-background: blue;
-}
-.slide: nth-of-type (5) {
-background: purple;
-}
+.slide:nth-of-type(1) {    /*Селектор :nth-of-type(n) обирає елемент, що є n елементом одного типу свого батька.*/
+        background: red;
+        }
+        .slide:nth-of-type(2) {
+        background: orange;
+        }
+        .slide:nth-of-type(3) {
+        background: green;
+        }
+        .slide:nth-of-type(4) {
+        background: blue;
+        }
+        .slide:nth-of-type(5) {
+        background: purple;
+        }
+
 
 Слід зазначити, що JavaScript (JS) під час роботи зі слайдами виконує вкрай
 важливе завдання: ховає поточний слайд та показує наступний. Для реалізації
 даної задачі, перш за все, потрібно змінити назви класів слайдів. 
 
 Ось код JS: 
-var slides = document.querySelectorAll ( '#slides .slide');
-var currentSlide = 0;
-var slideInterval = setInterval (nextSlide, 2000);
+const slides = document.querySelectorAll("#slides .slide");
+let currentSlide = 0;
+const slideInterval = setInterval(nextSlide, 2000);
+
 function nextSlide() {
-slides[currentSlide].className = 'slide';
-currentSlide = (currentSlide+1)%slides.lenght;
-slider[currentSlide].className = 'slide showing';
+  slides[currentSlide].className = "slide";
+  currentSlide = (currentSlide + 1) % slides.length;
+  slides[currentSlide].className = "slide showing";
 }
 
 Давайте розглянемо його структуру:
@@ -124,29 +125,32 @@ slider[currentSlide].className = 'slide showing';
 Наступним етапом у створенні слайд-шоу стане додавання кнопок паузи,
 наступного слайду та попереднього.
 Поговоримо про кнопку паузи. Додати її в HTML можна у такий спосіб:
-<button class=”controls” id=”pause”>Pause</button>
+<button class="controls" id="pause">Pause</button>
 
 Тепер додамо цей код до JS:
 
-var playing = true;
-var pauseButton = document.getElementById ( 'pause');
+let playing = true; 
+const pauseButton = document.getElementById("pause");
+
 function pauseSlideshow() {
-pauseButton.innerHTML = 'Play';
-playing = false;
-clearInterval (slideInterval);
+    pauseButton.innerHTML = "Play";
+    playing = false;
+    clearInterval(slideInterval);
 }
+
 function playSlideshow() {
-pauseButton.innerHTML = 'Pause';
-playing = true;
-slideInterval = setInterval (nextSlide, 2000);
+    pauseButton.innerHTML = "Pause";
+    playing = true;
+    slideInterval = setInterval(nextSlide, 2000);
 }
-pauseButton.onclick = function() {
-if(playing) {
-pauseSlideshow();
-} else {
-playingSlideshow();
+
+pauseButton.onclick = function () {
+    if (playing) {
+        pauseSlideshow();
+    } else {
+        playSlideshow();
+    }
 }
-};
 
 Розглянемо структуру скрипту:
 1. Змінна playing задіяна у моменти, коли слайдер активний.
@@ -163,26 +167,30 @@ playingSlideshow();
 Кнопки наступний та попередній
 
 Спочатку вивчимо, як додавати в HTML кнопки Next і Previous:
-<button class=”controls” id=”previous”>Previous</button>
-<button class=”controls” id=”next”>Next</button>
+<button class="controls" id="previous">Previous</button>
+<button class="controls" id="next">Next</button>
 Тепер змінимо цю функцію JavaScript:
+
 function nextSlide() {
-slides[currentSlide].className = 'slide';
-currentSlide = (currentSlide+1)%slides.lenght;
-slides[currentSlide].className = 'slide showing';
+  slides[currentSlide].className = "slide";
+  currentSlide = (currentSlide + 1) % slides.length;
+  slides[currentSlide].className = "slide showing";
 }
 
 на:
-
 function nextSlide() {
-goToSlide(currentSlide+1);
+  goToSlide(currentSlide + 1);
 }
+
 function previousSlide() {
-goToSlide(currentSlide-1);
+  goToSlide(currentSlide - 1);
+}
+
 function goToSlide(n) {
-slides[currentSlide].className = 'slide';
-currentSlide = (n+slides.lenght)%slides.lenght;
-slides[currentSlide].className = 'slide showing';
+  slides[currentSlide].className = "slide";
+  const length = slides.length; // Зберегти довжину масиву в змінній
+  currentSlide = (n + length) % length; // Використовувати збережену довжину
+  slides[currentSlide].className = "slide showing";
 }
 
 Для більшої гнучкості до скрипту вище додано загальну функцію goToSlide. Також,
@@ -194,13 +202,15 @@ slides[currentSlide].className = 'slide showing';
 
 Щоб кнопки почали працювати, додайте цей код до скрипту: 
 
-var next = document.getElementById (‘next’);
-var previous = document.getElementById ('previous');
-next.onclick = function() {
-pauseSlideshow();
-nextSlide();
+const next = document.getElementById("next");
+const previous = document.getElementById("previous");
+
+next.onclick = function () {
+  pauseSlideshow();
+  nextSlide();
 };
-previous.onclick = function(){
-pauseSlideshow();
-previousSlide();
+
+previous.onclick = function () {
+  pauseSlideshow();
+  previousSlide();
 };
