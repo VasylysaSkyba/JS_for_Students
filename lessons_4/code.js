@@ -18,12 +18,12 @@
 //     text.innerHTML = "На кнопку вже натиснули!!!"
 // }
 
-function onButton() {
-    const textColor = document.getElementById("text2");
-    //рандомний колір//
-    const red = Math.floor(Math.random() * 250);
-    const gren = Math.floor(Math.random() * 250);
-    const blue = Math.floor(Math.random() * 250);
-    //сет кольорів//
-    text2.style.color = "rgb("+red+", "+gren+", "+blue+")";
-}
+// function onButton() {
+//     const textColor = document.getElementById("text2");
+//     //рандомний колір//
+//     const red = Math.floor(Math.random() * 250);
+//     const gren = Math.floor(Math.random() * 250);
+//     const blue = Math.floor(Math.random() * 250);
+//     //сет кольорів//
+//     text2.style.color = "rgb("+red+", "+gren+", "+blue+")";
+// }

@@ -1,15 +1,15 @@
 #slides {
-  position: relative;
-  height: 300px;
-  padding: 0px;
-  margin: 0px;
-  list-style-type: none;
+  position: relative; /*Змінює положення елемента з його вихідного розташування*/
+  height: 300px; /*висота*/
+  padding: 0px; /*внутрішні відступи елемента*/
+  margin: 0px; /*зовнішні відступи*/
+  list-style-type: none; /*прибрати крапки в списку*/
 }
 .slide {
   position: absolute; /*розташування один за одним*/
-  left: 0px;
-  top: 0px;
-  width: 100%;
+  left: 0px; /*ліво*/
+  top: 0px; /*в горі*/
+  width: 100%; /*ширина*/
   height: 100%;
   opacity: 0; /*прозорість 0, не прозорий 1 */
   z-index: 1; /*визначає порядок стека елемента. Іншими словами, Ви можете розмістити елемент на сторінці вище іншого елементу або перед ним*/
@@ -24,14 +24,13 @@
 }
 
 .slide {
-  font-size: 20px;
+  font-size: 20px; /*розмір шрифта*/
   padding: 4px;
   box-sizing: border-box; /*Будь-які поля та межі будуть включені в розміри висоти та ширини елемента*/
   background: #333;
   color: #fff;
 }
-.slide:nth-of-type(1) {
-  /*Селектор :nth-of-type(n) обирає елемент, що є n елементом одного типу свого батька.*/
+.slide:nth-of-type(1) {   /*Селектор :nth-of-type(n) обирає елемент, що є n елементом одного типу свого батька.*/
   background: red;
 }
 .slide:nth-of-type(2) {
