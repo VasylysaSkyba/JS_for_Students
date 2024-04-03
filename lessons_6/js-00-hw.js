@@ -22,6 +22,59 @@
 // 15. пункт списку
 // 16. пункт списку
 
+// <!DOCTYPE html>
+// <html lang="en">
+// <head>
+//     <meta charset="UTF-8">
+//     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+//     <title>Collapsible Content</title>
+//     <style>
+//         /* Стилі для згорнутого контенту */
+//         .content {
+//             display: none;
+//         }
+//     </style>
+//     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+// </head>
+// <body>
+
+// <button id="toggleBtn">згорнути розгорнути</button>
+
+// <div class="content">
+//     <ul>
+//         <!-- Пункти списку -->
+//         <li>пункт списку 1</li>
+//         <li>пункт списку 2</li>
+//         <li>пункт списку 3</li>
+//         <li>пункт списку 4</li>
+//         <li>пункт списку 5</li>
+//         <li>пункт списку 6</li>
+//         <li>пункт списку 7</li>
+//         <li>пункт списку 8</li>
+//         <li>пункт списку 9</li>
+//         <li>пункт списку 10</li>
+//         <li>пункт списку 11</li>
+//         <li>пункт списку 12</li>
+//         <li>пункт списку 13</li>
+//         <li>пункт списку 14</li>
+//         <li>пункт списку 15</li>
+//         <li>пункт списку 16</li>
+//     </ul>
+// </div>
+
+// <script>
+//     $(document).ready(function(){
+//         // Обробник кліку кнопки "згорнути розгорнути"
+//         $("#toggleBtn").click(function(){
+//             $(".content").slideToggle(); // Згортання або розгортання контенту з класом "content"
+//         });
+//     });
+// </script>
+
+// </body>
+// </html>
+
+
 //     Мал. 1
 
 // 2. Оформіть такий HTML-документ (рис. 2) та напишіть код на jQuery для
@@ -45,6 +98,59 @@
 // 14. пункт списку
 // 15. пункт списку
 // 16. пункт списку
+
+
+// <!DOCTYPE html>
+// <html lang="en">
+// <head>
+//     <meta charset="UTF-8">
+//     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+//     <title>Hide Content</title>
+//     <style>
+//         /* Стилі для хованого контенту */
+//         .content {
+//             display: block;
+//         }
+//     </style>
+//     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+// </head>
+// <body>
+
+// <button id="hideBtn">зникнути з'явитися</button>
+
+// <div class="content">
+//     <ul>
+//         <!-- Пункти списку -->
+//         <li>пункт списку 1</li>
+//         <li>пункт списку 2</li>
+//         <li>пункт списку 3</li>
+//         <li>пункт списку 4</li>
+//         <li>пункт списку 5</li>
+//         <li>пункт списку 6</li>
+//         <li>пункт списку 7</li>
+//         <li>пункт списку 8</li>
+//         <li>пункт списку 9</li>
+//         <li>пункт списку 10</li>
+//         <li>пункт списку 11</li>
+//         <li>пункт списку 12</li>
+//         <li>пункт списку 13</li>
+//         <li>пункт списку 14</li>
+//         <li>пункт списку 15</li>
+//         <li>пункт списку 16</li>
+//     </ul>
+// </div>
+
+// <script>
+//     $(document).ready(function(){
+//         // Обробник кліку кнопки "зникнути з'явитися"
+//         $("#hideBtn").click(function(){
+//             $(".content").toggle(); // Ховання або відображення контенту з класом "content"
+//         });
+//     });
+// </script>
+
+// </body>
+// </html>
 
 //     Мал. 2
 
