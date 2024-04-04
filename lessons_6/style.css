@@ -23,3 +23,14 @@
 .text:hover {
     background: yellow;
   }
+
+
+  /* Стилі для згорнутого контенту */
+         .content {
+           display: none;
+        }
+
+  .content2 {
+    display: block;
+   
+}

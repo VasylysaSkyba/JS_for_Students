@@ -63,12 +63,12 @@
 // </div>
 
 // <script>
-//     $(document).ready(function(){
-//         // Обробник кліку кнопки "згорнути розгорнути"
-//         $("#toggleBtn").click(function(){
-//             $(".content").slideToggle(); // Згортання або розгортання контенту з класом "content"
-//         });
-//     });
+    // $(document).ready(function(){
+    //     // Обробник кліку кнопки "згорнути розгорнути"
+    //     $("#toggleBtn").click(function(){
+    //         $(".content").slideToggle(); // Згортання або розгортання контенту з класом "content"
+    //     });
+    // });
 // </script>
 
 // </body>
@@ -107,14 +107,14 @@
 //     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 //     <title>Hide Content</title>
 //     <style>
-//         /* Стилі для хованого контенту */
+        /* Стилі для хованого контенту */
 //         .content {
 //             display: block;
 //         }
-//     </style>
-//     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-// </head>
-// <body>
+// //     </style>
+// //     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+// // </head>
+// // <body>
 
 // <button id="hideBtn">зникнути з'явитися</button>
 
@@ -141,12 +141,12 @@
 // </div>
 
 // <script>
-//     $(document).ready(function(){
-//         // Обробник кліку кнопки "зникнути з'явитися"
-//         $("#hideBtn").click(function(){
-//             $(".content").toggle(); // Ховання або відображення контенту з класом "content"
-//         });
-//     });
+    // $(document).ready(function(){
+    //     // Обробник кліку кнопки "зникнути з'явитися"
+    //     $("#hideBtn").click(function(){
+    //         $(".content").toggle(); // Ховання або відображення контенту з класом "content"
+    //     });
+    // });
 // </script>
 
 // </body>
