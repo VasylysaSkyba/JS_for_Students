@@ -24,7 +24,7 @@ while (remainingLetters > 0) {                               // Цикл, яки
         remainingLetters--;
       }
     }
-  }
+  }``
 }
 
 alert(answerArray.join(" "));                                // Показує поточний стан вгаданого слова.
