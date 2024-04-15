@@ -127,8 +127,109 @@ alert (“Treasure found! Made by clicks: ” + clicks);
 }
 
 
-Код гри
-Тепер, коли відомі всі частини коду, їх можна об'єднати (рис. 8).
+---------------Код гри-----------------
+
+const getRandomNumber = function (size) { 
+    return Math.floor(Math.random() * size);
+};
+
+const getDistance = function (event, target) {
+    const diffX = event.offsetX - target.x;
+    const diffY = event.offsetY - target.y;
+    return Math.sqrt((diffX * diffX) + (diffY * diffY));
+};
+
+const getDistanceHint = function (distance) {
+    if (distance < 10) {
+        return "Обпалишся!";
+    } else if (distance < 20) {
+        return "Дуже гаряче";
+    } else if (distance < 40) {
+        return "Гаряче";
+    } else if (distance < 80) {
+        return "Тепло";
+    } else if (distance < 160) {
+        return "Холодно";
+    } else if (distance < 320) {
+        return "Дуже холодно";
+    } else {
+        return "Замерзнеш!";
+    }
+};
+
+const width = 400;
+const height = 400;
+const clicks = 0;
+
+const target = {
+    x: getRandomNumber(width),
+    y: getRandomNumber(height)
+};
+
+$("#map").click(function (event) {
+    clicks++;
+    const distance = getDistance(event, target);
+    const distanceHint = getDistanceHint(distance);
+    $("#distance").text(distanceHint);
+    if (distance < 8) {
+        alert("Скарб знайдено! Зроблено кліків: " + clicks);
+    }
+});
+
+
+ -------- код гри з коментарями --------------
+const getRandomNumber = function (size) {                   //1. Здобути випадкове число від 0 до size-1
+return Math.floor(Math.random() * size);
+};
+
+const getDistance = function (event, target) {              //7. Розрахувати відстань від кліка (event) до скарбу (target)
+const diffX = event.offsetX - target.x;                     // використовувати теорему Піфагора: У прямокутному трикутнику квадрат гіпотенузи   
+const diffY = event.offsetY - target.y;                     // дорівнює сумі квадратів катетів c 2 = a 2 + b 2 .
+                
+return Math.sqrt((diffX * diffX) + (diffY * diffY));         //8. метод sqrt - знаходить квадратний корінь (()+())
+};
+
+const getDistanceHint = function (distance) {                //9. Отримати рядок підказки для відстані
+
+if (distance < 10) {
+  return "Обпалишся!";
+} else if (distance < 20) {
+  return "Дуже гаряче";
+} else if (distance < 40) {
+  return "Гаряче";
+} else if (distance < 80) {
+  return "Тепло";
+} else if (distance < 160) {
+  return "Холодно";
+} else if (distance < 320) {
+  return "Дуже холодно";
+} else {
+  return "Замерзнеш!";
+}
+};
+
+
+const width = 400;                                             //2. Створити змінні
+const height = 400;
+
+let clicks = 0;                                                //5. Кількість кліків на початку
+
+const target = {                                               //3. Випадкове розташування скарбу
+x: getRandomNumber(width),
+y: getRandomNumber(height)
+};
+
+$("#map").click(function (event) {                             //4. Додати обробник кліка для елементу img
+clicks++;                                                      //6. Збільшити її на 1
+
+const distance = getDistance(event, target);                   //10. Отримати відстань від місця кліка до скарбу
+const distanceHint = getDistanceHint(distance);                //11. Перетворити відстань у підказку
+$("#distance").text(distanceHint);                             //12. Записати нову підказку в елемент #distance
+if (distance < 8) {                                            //13. Якщо клік був достатньо близько, привітати з перемогою
+alert("Скарб знайдено! Зроблено кліків: " + clicks);
+}
+});
+
 
 ///мал8
 
