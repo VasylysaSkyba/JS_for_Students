@@ -57,7 +57,9 @@ h2 {
     transform-style: preserve-3d;
     perspective: 500px;
 }
+/*потім переходимо в js*/
 
+/*частина 2*/
 .item {
     position: relative;
     width: 100px;
@@ -71,9 +73,6 @@ h2 {
     transition: 0.25s;
 }
 
-.item.boxOpen{
-    transform: rotateY(0deg);
-}
 
 .item::after {
     content: "";
@@ -84,11 +83,17 @@ h2 {
     transition: 0.25s;
     transform: rotateY(0deg);
     backface-visibility: hidden;
-
-
 }
 
+/*переходимо в js*/
+
+/*частина 3-2*/
+.item.boxOpen{
+    transform: rotateY(0deg);
+}
+
+/*частина 3-1*/
 .boxOpen::after, 
-.boxMatch::after{
+.boxMatch::after{ /*частина 4*/
     transform: rotateY(180deg);
 }
